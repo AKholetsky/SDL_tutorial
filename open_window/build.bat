@@ -28,6 +28,6 @@ if not exist %objDir% mkdir %objDir%
 cl %compileFlags% %files% %libs% %linkFlags%
  
 :: Copy dependencies
-xcopy /y ..\..\..\SDL\SDL2\lib\x64\SDL2.dll .
+xcopy /y ..\..\SDL2\lib\x64\SDL2.dll .
  
 popd
