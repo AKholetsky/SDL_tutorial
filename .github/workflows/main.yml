@@ -8,9 +8,9 @@ jobs:
     runs-on: windows-2016
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-    run: |
-      open_window/shell.bat
-      open_window/build.bat
-    shell: cmd
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+        run: |
+          open_window/shell.bat
+          open_window/build.bat
+        shell: cmd
