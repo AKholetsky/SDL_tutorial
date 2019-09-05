@@ -1,6 +1,7 @@
 @echo off
  
 set scriptsDir=%~dp0
+echo %scriptsDir%
 cd /d %scriptsDir%
  
 :: uncomment the line below line to debug the vcvars
