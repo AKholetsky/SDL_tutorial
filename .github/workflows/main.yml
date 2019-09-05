@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-    - run: |
-        open_window/shell.bat
-        open_window/build.bat
+    run: |
+      open_window/shell.bat
+      open_window/build.bat
+    shell: cmd
