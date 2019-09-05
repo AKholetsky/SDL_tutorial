@@ -10,7 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
-        run: |
+      - run: |
           open_window\shell.bat 
           build.bat
+      - run: echo "MEs"
         shell: cmd
