@@ -1,5 +1,6 @@
 @echo off
- 
+echo started
+
 set scriptsDir=%~dp0
 echo %scriptsDir%
 cd /d %scriptsDir%
@@ -14,3 +15,5 @@ set path=%scriptsDir%;%path%
 :: Add dependencies to our include and lib paths (used by cl.exe)
 set INCLUDE=%scriptsDir%..\SDL2\include;%INCLUDE%
 set LIB=%scriptsDir%..\SDL2\lib\x64;%LIB%
+
+echo ended

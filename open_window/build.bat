@@ -1,5 +1,6 @@
 @echo off
- 
+echo started
+
 set buildDir=%~dp0\build
  
 if not exist %buildDir% mkdir %buildDir%
@@ -31,3 +32,5 @@ cl %compileFlags% %files% %libs% %linkFlags%
 xcopy /y ..\..\SDL2\lib\x64\SDL2.dll .
  
 popd
+
+echo ended build
