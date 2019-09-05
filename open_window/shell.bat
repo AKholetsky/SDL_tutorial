@@ -6,7 +6,8 @@ cd /d %scriptsDir%
  
 :: uncomment the line below line to debug the vcvars
 :: set VSCMD_DEBUG=1
-call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+:: call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
  
 set path=%scriptsDir%;%path%
  
