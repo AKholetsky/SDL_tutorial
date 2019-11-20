@@ -29,5 +29,5 @@ jobs:
       - name: Build on macOS
         run: |
           tar -zxvf SDL2-2.0.10.tar.gz && cd SDL2-2.0.10 && \
-          ./configure --prefix=/home/user/SDL && make && make install && cd .. && \
+          ./configure --prefix=/home/user/SDL && make && sudo make install && cd .. && \
           g++ open_window/main.cpp -o main `/home/user/SDL/sdl-config --cflags --libs` -framework OpenGL -framework Cocoa
