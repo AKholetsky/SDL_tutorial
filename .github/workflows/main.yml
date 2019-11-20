@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  build-win:
 
     runs-on: windows-2016
     
@@ -12,3 +12,12 @@ jobs:
       - name: Run a one-line script
         run: open_window\shell.bat && build.bat          
         shell: cmd
+
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build on ubuntu
+        run: |
+          sudo apt-get install libsdl2-dev
+          g++ open_window/main.cpp -w -lSDL2 -o main
