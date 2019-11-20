@@ -9,7 +9,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v1
-      - name: Run a one-line script
+      - name: Build on windows
         run: open_window\shell.bat && build.bat          
         shell: cmd
 
@@ -21,3 +21,13 @@ jobs:
         run: |
           sudo apt-get install libsdl2-dev
           g++ open_window/main.cpp -w -lSDL2 -o main
+
+  build-macOS:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build on macOS
+        run: |
+          tar -zxvf archive_name.tar.gz
+          ./configure --prefix=/home/user/SDL && make && make install
+          g++ open_window/main.cpp -o main `/home/user/SDL/sdl-config --cflags --libs` -framework OpenGL -framework Cocoa
