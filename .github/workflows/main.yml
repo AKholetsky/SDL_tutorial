@@ -20,7 +20,8 @@ jobs:
       - name: Build on ubuntu
         run: |
           sudo apt-get install libsdl2-dev && \
-          g++ open_window/main.cpp -w -lSDL2 -o main
+          g++ ./open_window/main.cpp -w -lSDL2 -o ./open_window/main && \
+          ls -l ./open_window
 
   build-macOS:
     runs-on: macOS-latest
