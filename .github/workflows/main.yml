@@ -30,7 +30,7 @@ jobs:
         run: |
           brew install SDL2 && \
           mkdir ./open_window/include/ && cp -R /usr/local/Cellar/SDL2/2.0.10/include ./open_window/include && \
-          mkdie ./open_window/lib/ && cp -R /usr/local/Cellar/SDL2/2.0.10/lib ./open_window/lib && ls -l open_window && \
+          mkdir ./open_window/lib/ && cp -R /usr/local/Cellar/SDL2/2.0.10/lib ./open_window/lib && ls -l open_window && \
           g++ ./open_window/main.cpp -o ./open_window/main -I ./open_window/include -L ./open_window/lib -l SDL2-2.0.0
           # tar -zxvf SDL2-2.0.10.tar.gz && cd SDL2-2.0.10 && sudo mkdir /home/user && \
           # ./configure --prefix=/home/user/SDL && make && sudo make install && cd .. && \
