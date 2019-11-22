@@ -12,6 +12,7 @@ set objDir=.\obj\
 set outputExe=open_window
 set libs=SDL2.lib SDL2main.lib
 set files=..\main.cpp
+set resources=images\
  
 :: compiler flags:
 :: /Zi enable debugging information
@@ -30,6 +31,8 @@ cl %compileFlags% %files% %libs% %linkFlags%
  
 :: Copy dependencies
 xcopy /y ..\..\SDL2\lib\x64\SDL2.dll .
+
+xcopy /y /s ..\images .\images\
  
 popd
 
